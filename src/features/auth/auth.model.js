@@ -5,26 +5,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image: {
-        type: String,
-        required: true,
-    },
     email: {
         type: String,
         required: true,
         unique: true,
-    },
-    designation: {
-        type: String,
-        required: true,
-    },
-    stipend: {
-        type: Number,
-        required: true,
-    },
-    stipendStatus: {
-        type: String,
-        default: "due"
     },
     password: {
         type: String,
@@ -33,6 +17,7 @@ const userSchema = new mongoose.Schema({
     role: {
         type: String,
         required: true,
+        default: "customer"
     },
 }, {
     timestamps: true,
