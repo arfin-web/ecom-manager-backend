@@ -5,6 +5,7 @@ const dbConnect = require("./config/dbConnect")
 const authRoutes = require("./features/auth/auth.route")
 const customersRoute = require("./features/customers/customers.route")
 const productsRoute = require("./features/products/products.route")
+const noticeRoute = require("./features/notice/notice.route")
 
 dbConnect()
 
@@ -24,6 +25,7 @@ app.use(cors(corsOptions));
 app.use("/api/v1/auth", authRoutes)
 app.use("/api/v1", customersRoute)
 app.use("/api/v1", productsRoute)
+app.use("/api/v1", noticeRoute)
 
 // Define Root Get Route
 app.get("/", (req, res) => {
