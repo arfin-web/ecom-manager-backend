@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json())
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://ecom-manager.vercel.app', 'https://admin-dashboard-leo.vercel.app'],
+    origin: ['http://localhost:3000', 'https://ecom-manager.vercel.app'],
     credentials: true,
     optionSuccessStatus: 200
 };
